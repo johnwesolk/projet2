@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login & Sign-Up Page</title>
+    <link rel="stylesheet" href="ProfileCard.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <img src="cffff.png" alt="Logo" class="logo">
+            <div class="form-container">
+                <!-- Login Form -->
+                <div id="login-form" class="form-content">
+                    <h1>Login</h1>
+                    <form action="#" method="post">
+                        <div class="textbox">
+                            <input type="text" placeholder="Username" name="username" required>
+                        </div>
+                        <div class="textbox">
+                            <input type="password" placeholder="Password" name="password" required>
+                        </div>
+                        <input type="submit" class="btn" value="Login">
+                    </form>
+                    <p class="footer-text">Don't have an account? <a href="#" onclick="showSignUp()">Sign up</a></p>
+                </div>
+
+                <!-- Sign-Up Form -->
+                <div id="signup-form" class="form-content" style="display: none;">
+                    <h1>Sign Up</h1>
+                    <form action="#" method="post">
+                        <div class="textbox">
+                            <input type="text" placeholder="Username" name="username" required>
+                        </div>
+                        <div class="textbox">
+                            <input type="email" placeholder="Email" name="email" required>
+                        </div>
+                        <div class="textbox">
+                            <input type="password" placeholder="Password" name="password" required>
+                        </div>
+                        <div class="textbox">
+                            <input type="password" placeholder="Confirm Password" name="confirm-password" required>
+                        </div>
+                        <input type="submit" class="btn" value="Sign Up">
+                    </form>
+                    <p class="footer-text">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showLogin() {
+            document.getElementById('login-form').style.display = 'block';
+            document.getElementById('signup-form').style.display = 'none';
+        }
+
+        function showSignUp() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('signup-form').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
